@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/slides/next-session-js-1/:path*",
+      "destination": "https://next-session-js-1-slides.vercel.app/:path*"
+    }
+  ]
+}
