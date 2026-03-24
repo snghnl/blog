@@ -79,7 +79,7 @@ export default async function Talk({ params }) {
             url: `${baseUrl}/talks/${talk.slug}`,
             author: {
               "@type": "Person",
-              name: "My Portfolio",
+              name: "Seungheon Lee",
             },
           }),
         }}
