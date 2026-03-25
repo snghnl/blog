@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "About",
   description: "About Seungheon Lee.",
@@ -6,10 +8,15 @@ export const metadata = {
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        About Me
-      </h1>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">About Me</h1>
       <div className="prose prose-neutral dark:prose-invert">
+        <Image
+          src="/seungheonlee.jpeg"
+          alt="Seungheon Lee"
+          width={180}
+          height={180}
+          className="float-right ml-6 mb-4 !mt-0 rounded-full object-cover"
+        />
         <p className="mb-4">
           {`Hi, I'm Seungheon Lee — a Computer Science and Engineering student at Korea University in South Korea. I have a deep passion for learning and constantly push myself to grow across a wide range of areas in computer science.`}
         </p>
