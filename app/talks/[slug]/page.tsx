@@ -91,6 +91,16 @@ export default async function Talk({ params }) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(talk.metadata.publishedAt)}
         </p>
+        {talk.metadata.slides && (
+          <a
+            href={talk.metadata.slides}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200"
+          >
+            slides ↗
+          </a>
+        )}
       </div>
       <article className="prose">
         <CustomMDX source={talk.content} />
