@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CustomMDX } from "app/components/mdx";
 import { formatDate, getBlogPosts } from "app/blog/utils";
 import { baseUrl } from "app/sitemap";
+import GiscusComments from "app/components/giscus";
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -95,6 +96,7 @@ export default async function Blog({ params }) {
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+      <GiscusComments />
     </section>
   );
 }
